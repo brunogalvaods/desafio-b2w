@@ -1,0 +1,14 @@
+---
+version: '2'
+services:
+  desafio-b2w:
+    build: .
+    depends_on:
+      - mongodb
+    ports:
+      - "8888:8888"
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+
