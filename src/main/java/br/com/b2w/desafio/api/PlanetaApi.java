@@ -78,7 +78,7 @@ public class PlanetaApi {
 	 * @throws UnirestException 
 	 */
 	private void getAparicoesFilme(final PlanetaVo planetaVo) throws PlanetNotFoundException, UnirestException {
-		String string = "https://swapi.co/api/planets/?search=";
+		String string = "https://swapi.dev/api/planets/?search=";
 		HttpResponse<JsonNode> response = Unirest
 				.get(string.concat(planetaVo.getNome())).asJson();
 		if (response.getStatus() == 200) {
@@ -89,7 +89,7 @@ public class PlanetaApi {
 				JSONArray array = (JSONArray) films.get("films");
 				planetaVo.setAparicoes(array.length());
 			} else {
-				throw new PlanetNotFoundException("Nãof foi encontrado o planeta no catálogo.");
+				throw new PlanetNotFoundException("Não foi encontrado o planeta no catálogo.");
 			}
 		}
 

@@ -44,7 +44,7 @@ public class SwaggerConfig {
 				"Desafio B2W REST API", "1.0",
 				"Termos de serviço",
 				"Bruno Galvão",
-				"OLX License Version 1.0",
+				"B2W License Version 1.0",
 				"http://localhost:8080/licenses/LICENSE-1.0");
         return apiInfo;
     }
